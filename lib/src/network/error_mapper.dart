@@ -17,7 +17,7 @@ AppFailure mapDioErrorToFailure(DioException err) {
     );
   }
 
-  final statusCode = err.response?.statusCode;
+  final statusCode = err.response?.statusCode ?? 0;
 
   switch (statusCode) {
     case 401:
