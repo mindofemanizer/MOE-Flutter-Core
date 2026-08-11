@@ -9,7 +9,7 @@ dependencies:
   moe_flutter_core:
     git:
       url: https://github.com/mindofemanizer/MOE-Flutter-Core.git
-      ref: master
+      ref: main
 ```
 
 ## Usage
