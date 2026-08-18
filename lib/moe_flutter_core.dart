@@ -4,6 +4,7 @@
 /// ```dart
 /// import 'package:moe_flutter_core/moe_flutter_core.dart';
 /// ```
+library;
 
 // Config
 export 'src/config/env_config.dart';
@@ -12,6 +13,9 @@ export 'src/config/moe_core.dart';
 
 // Constants
 export 'src/constants/design_tokens.dart';
+
+// Models
+export 'src/models/currency_code.dart';
 
 // Network
 export 'src/network/app_result.dart';

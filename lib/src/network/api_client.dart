@@ -40,11 +40,13 @@ class TokenInterceptor extends Interceptor {
 final dioProvider = Provider<Dio>((ref) {
   final envConfig = MoeCore.envConfig;
 
-  final dio = Dio(BaseOptions(
-    baseUrl: envConfig.apiBaseUrl,
-    connectTimeout: DesignTokens.connectTimeout,
-    receiveTimeout: DesignTokens.receiveTimeout,
-  ));
+  final dio = Dio(
+    BaseOptions(
+      baseUrl: envConfig.apiBaseUrl,
+      connectTimeout: DesignTokens.connectTimeout,
+      receiveTimeout: DesignTokens.receiveTimeout,
+    ),
+  );
 
   return dio;
 });

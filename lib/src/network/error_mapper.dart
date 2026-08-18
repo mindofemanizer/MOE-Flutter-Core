@@ -19,6 +19,13 @@ AppFailure mapDioErrorToFailure(DioException err) {
 
   final statusCode = err.response?.statusCode;
 
+  if (statusCode != null && statusCode >= 500) {
+    return const AppFailure(
+      type: FailureType.server,
+      message: 'Server bermasalah. Coba lagi nanti.',
+    );
+  }
+
   switch (statusCode) {
     case 401:
       return const AppFailure(
@@ -53,11 +60,6 @@ AppFailure mapDioErrorToFailure(DioException err) {
         message: 'Validasi gagal.',
         fieldErrors: errors,
         statusCode: 422,
-      );
-    case >= 500:
-      return const AppFailure(
-        type: FailureType.server,
-        message: 'Server bermasalah. Coba lagi nanti.',
       );
     default:
       return AppFailure(

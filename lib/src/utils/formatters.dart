@@ -1,5 +1,8 @@
 /// Common formatters for data display.
 class Formatters {
+  /// Format a number with thousand separators.
+  static String number(num amount) => _formatNumber(amount);
+
   /// Format currency to IDR.
   static String currency(num amount, {String symbol = 'Rp '}) {
     return '$symbol${_formatNumber(amount)}';
@@ -28,7 +31,7 @@ class Formatters {
   static String dateId(DateTime date) {
     const months = [
       'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-      'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+      'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember',
     ];
     return '${date.day} ${months[date.month - 1]} ${date.year}';
   }
