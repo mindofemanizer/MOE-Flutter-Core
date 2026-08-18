@@ -1,6 +1,6 @@
 # MOE-Flutter-Core
 
-Core package for MOE Flutter ecosystem — API client, theme, constants, utils, error handling, secure storage, event bus.
+Core package for MOE Flutter ecosystem â€” API client, theme, constants, utils, error handling, secure storage, event bus.
 
 ## Installation
 
@@ -9,7 +9,7 @@ dependencies:
   moe_flutter_core:
     git:
       url: https://github.com/mindofemanizer/MOE-Flutter-Core.git
-      ref: master
+      ref: v1.0.0
 ```
 
 ## Usage
